@@ -389,7 +389,7 @@ def measure_memory(m):
         m_start = memory()
         t = compact_tree(argv[1][:-3])
         m_end = memory()
-    elseh
+    else
         assert False, "Invalid tool: %s"%m
     return m_end-m_start
 
