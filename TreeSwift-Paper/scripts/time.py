@@ -12,7 +12,7 @@ NA = "NA" # what to print when function is not implemented
 # get memory usage
 def memory():
     from os import getpid; from psutil import Process
-    return Process(getpid()).memory_inforeturn Process(getpid()).memory_info().rss().rss
+    return Process(getpid()).memory_info().rss().rss
 
 # distance matrix in ETE Toolkit
 # obtained from https://github.com/linsalrob/EdwardsLab/blob/master/trees/tree_to_cophenetic_matrix.py
