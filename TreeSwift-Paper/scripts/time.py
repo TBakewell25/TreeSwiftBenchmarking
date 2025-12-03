@@ -6,7 +6,7 @@ from treeswift import read_tree_newick
 import dendropy
 import ete3
 import numpy
-from CompactTree import compact_tree, traverse_postorder, traverse_preorder
+from CompactTree import compact_tree
 NA = "NA" # what to print when function is not implemented
 
 # get memory usage
@@ -243,7 +243,7 @@ def postorder(m):
         tree = compact_tree.compact_tree(argv[1][:-3])
         total = 0.
         t_start = time()
-        for node in traverse_postorder(tree):
+        for node in compact_tree.traverse_postorder(tree):
             total += tree.get_edge_length(node)
         t_end = time()
     else:
@@ -280,7 +280,7 @@ def preorder(m):
         tree = compact_tree.compact_tree(argv[1][:-3])
         total = 0.
         t_start = time()
-        for node in traverse_preorder(tree):
+        for node in compact_tree.traverse_preorder(tree):
             total += tree.get_edge_length(node)
         t_end = time()
     else:
