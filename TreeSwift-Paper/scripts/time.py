@@ -240,7 +240,7 @@ def postorder(m):
         t_end = time()
 
     elif m == 'compacttree':
-        tree = compact_tree(argv[1][:-3])
+        tree = compact_tree.compact_tree(argv[1][:-3])
         total = 0.
         t_start = time()
         for node in traverse_postorder(tree):
@@ -277,7 +277,7 @@ def preorder(m):
             pass
         t_end = time()
     elif m == 'compacttree':
-        tree = compact_tree(argv[1][:-3])
+        tree = compact_tree.compact_tree(argv[1][:-3])
         total = 0.
         t_start = time()
         for node in traverse_preorder(tree):
@@ -360,7 +360,7 @@ def load_tree(m):
         t_end = time()
     elif m == 'compacttree':
         t_start = time()
-        tree = compact_tree(argv[1][:-3])
+        tree = compact_tree.compact_tree(argv[1][:-3])
         t_end = time()
     else:
         assert False, "Invalid tool: %s"%m
@@ -387,7 +387,7 @@ def measure_memory(m):
         m_end = memory()
     elif m == 'compacttree':
         m_start = memory()
-        t = compact_tree(argv[1][:-3])
+        t = compact_tree.compact_tree(argv[1][:-3])
         m_end = memory()
     else:
         assert False, "Invalid tool: %s"%m
