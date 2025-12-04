@@ -175,17 +175,10 @@ def measure_memory(m):
     return m_end-m_start
 
 TASKS = {
-    'distance_matrix':distance_matrix,
-    'inorder':inorder,
-    'ladderize':ladderize,
-    'levelorder':levelorder,
     'load_tree':load_tree,
     'memory':measure_memory,
-    'mrca':mrca,
     'postorder':postorder,
     'preorder':preorder,
-    'rootdistorder':rootdistorder,
-    'total_branch_length':total_branch_length,
 }
 
 # run
